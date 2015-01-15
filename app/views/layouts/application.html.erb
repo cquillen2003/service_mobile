@@ -113,23 +113,28 @@
                             <p class="text-white">Fully customizable and works with existing software.</p>
                             <p class="text-white">Coming Spring 2015</p>
                             
-                            <div class="col-md-12">    
-                                <!-- Early Access Subscribe. Emails List in subscribe.txt -->
-                                <form id="subscribe" role="form">
-                                    <div class="row earlyaccess-box">
-                                        <div class="col-md-11" style="padding-left:0">
-                                            <p class="subscription-success"><i class="icon icon_check_alt2"></i> You are successfully subscribed for our beta list.</p>
-                                            <p class="subscription-failed"><i class="icon icon_close_alt2"></i> Something went wrong!</p>
+                            <div class="col-md-12">
 
-                                            <div class="input-group">
-                                                <input type="email" id="s-email" name="email" placeholder="Enter your Email Address" class="form-control" required style="min-width:250px">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-color">GET EARLY ACCESS</button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+								<!-- Early Access Subscribe. Emails List in subscribe.txt -->
+								<%= form_for(@lead, remote: true) do |f| %>
+
+								    <div class="row earlyaccess-box">
+								        <div class="col-md-11" style="padding-left:0">
+								            <p class="subscription-success"><i class="icon icon_check_alt2"></i> Thank you!  We will contact you shortly.</p>
+								            <p class="subscription-failed"><i class="icon icon_close_alt2"></i> Something went wrong.  Please try again later.</p>
+
+								            <div class="input-group">
+								            	<%= f.text_field(:email, class: "form-control", style: "min-width:250px",
+								            		placeholder: "Enter your Email Address") %>
+								                <span class="input-group-btn">
+								                    <%= f.submit "GET EARLY ACCESS", class: "btn btn-color", id: "lead_button"  %>
+								                </span>
+								            </div>
+								        </div>
+								    </div>
+
+								<% end %>                     
+
                             </div>
                             <span class="text-white">We will never spam you or share your email address.</span>
                             
@@ -267,7 +272,10 @@
     <!-- =========================
          SCRIPTS 
     ============================== -->
-    <script src="/smartmvp/js/plugins/jquery1.11.0.min.js"></script>
+    <!-- Not using the asset pipeline, but this is required to include jquery_ujs for remote (ajax) form -->
+    <!-- Also includes jquery -->
+    <%= javascript_include_tag :application %>
+    <!-- <script src="/smartmvp/js/plugins/jquery1.11.0.min.js"></script> -->
     <script src="/smartmvp/js/plugins/bootstrap.min.js"></script>
 
     <!-- Custom Script -->
