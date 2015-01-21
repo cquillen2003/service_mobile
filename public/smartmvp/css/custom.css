@@ -1,27 +1,3 @@
-.fast-reg .hero-section, .earlyaccess .hero-section{
-    text-align: left;
-}
-
-.hero-section p {
-	margin-bottom: 20px;
-}
-
-.email-policy {
-	font-size: 14px;
-}
-
-@media (min-width: 992px) {
-
-	.earlyaccess .hero-section {
-		padding-top: 5%;
-	}
-
-}
-
-@media (max-width: 992px) { 
-
-	.app-box {
-		padding-top: 25%;
-	}
-
+.earlyaccess .hero-section {
+	text-align: left;
 }

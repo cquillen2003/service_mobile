@@ -21,57 +21,14 @@
     .header .overlay{
         height: 650px;
     }
-
-    /*------------------------------------------*/
-    /*   Showcase Video Button
-    /*------------------------------------------*/
-    .showcase .video-player{
-        left: 53%;
-    }
-
-    /*------------------------------------------*/
-    /*   Charts
-    /*------------------------------------------*/
-    #canvas-holder{
-        left:18%;
-    }
-
-    #canvas2-holder{
-        display:none;
-    }
-
-    .signup-handwritten {
-        right: -30px;
-    }
-
-    .doughnut-box {
-        margin-bottom: 146px;
-    }
-
-    /*------------------------------------------*/
-    /*   Newsletter
-    /*------------------------------------------*/
-    .newsletter .getnewsletter{
-        width: 120px;
-    }
     
     /*------------------------------------------*/
-    /*   Footer
+    /*    About Section
     /*------------------------------------------*/
-    .footer-cta .btn {
-        margin-left: 0;
-        margin-top: 10px;
+    .about-img {
+        padding-top: 65px;
     }
-
-    /*------------------------------------------*/
-    /*   Header App
-    /*------------------------------------------*/
-    .hero-app .hero-section{
-        padding-top: 10%;
-    }
-
-    
-	
+    	
 }
 
 
@@ -170,215 +127,34 @@
     }
 
     /*------------------------------------------*/
-    /*   Features Tab
+    /*   Testimonial Section
     /*------------------------------------------*/
-    .tab-features .large{
-        margin-bottom: 50px;
+    .early-testimonial .large{
+        margin-bottom: 0;
     }
 
-    .tab-features .etabs {
-        float: none;
-        overflow: hidden;
-        margin: 0 auto;
-        height: auto;
-        display: block;
-        text-align: left;
+    .early-testimonial blockquote{
+        margin-top: 50px;
     }
 
-    .tab-features .etabs .tab {
-        display: table;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        border-bottom: 1px solid #ffffff;
-        padding: 1% 0;
-        border-right: 0;
-        opacity: 1;
-    }
-
-    .tab-features .etabs .tab:first-child {
-        border-top: 1px solid #ffffff;
-    }
-
-    .tab-features .etabs .large {
-        margin-bottom: 50px;
-    }
-
-    .tab-features .etabs .icon-sm {
-        padding-left: 15px;
-    }
-
-    .tab-features .etabs .tab.active {
-        background-color: #ffffff;
-    }
-
-    .tab-features .etabs .tab.active h5, .tab-features .etabs .tab.active .icon-sm i{
-        color: #3e3e3e;
-    }
-
-    .tab-features .etabs .tab.active:before {
-        display: none;
-    }
-
-    .tab-features .etabs h5{
-        display: inline-block;
-    }
-
-    .tab-icon .large{
-        margin-bottom: 10px;
+    .early-testimonial .testimonial-name{
+        padding-top: 19px;
     }
 
     /*------------------------------------------*/
-    /*   Testimonials
+    /*    About Section
     /*------------------------------------------*/
-    .testimonial-press .etabs{
-        display:none;
-    }
-    
-    /*------------------------------------------*/
-    /*   Newsletter
-    /*------------------------------------------*/
-    .newsletter .table{
-        margin-top: 25px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .newsletter .table:last-child{
-        margin-bottom: 10px;
-    }
-
-    .newsletter .table-row{
-        display:block;
-    }
-
-    .newsletter .table-cell{
-        width: 100%;
-        display:block;
-        padding-bottom: 10px;
-    }
-
-    .newsletter .social-list>li{
-        display: inline-block;
-        float: none;
-    }
-
-    .newsletter .input-group{
-        width: 60%;
-        margin: 0 auto;
+    .about-img {
+        padding-top: 50px;
     }
 
     /*------------------------------------------*/
-    /*   Charts
+    /*    Footer
     /*------------------------------------------*/
-    #canvas-holder{
-        display:none;
+    .footer-right {
+        margin-top: 50px;
     }
-
-    .line-canvas{
-        margin:0 auto;
-        width:70%;
-    }
-
-    .charts p.large{
-        margin-bottom: 50px;
-    }
-
-    .doughnut-box {
-        margin-bottom: 70px;
-    }
-
-    /*------------------------------------------*/
-    /*    Sign-Up Divider
-    /*------------------------------------------*/
-    .signup-handwritten {
-        right: 9px;
-        bottom: -200px;
-        -moz-transform: rotate(-5deg);
-        -o-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-        -webkit-transform: rotate(-5deg);
-        transform: rotate(-5deg);
-    }
-
-    .signup-handwritten:before{
-        left: 75px;
-        top: -48px;
-        -moz-transform: rotate(105deg);
-        -o-transform: rotate(105deg);
-        -ms-transform: rotate(105deg);
-        -webkit-transform: rotate(105deg);
-        transform: rotate(105deg);
-    }
-
-    .signup-divider .form-group{
-        width: 30%;
-    }
-
-    /*------------------------------------------*/
-    /*    Pricing
-    /*------------------------------------------*/
-    .pricing-tab {
-        padding: 50px 27px 30px;
-    }
-
-    .pricing-tab h4 {
-        margin: 0 0 30px;
-    }
-
-    /*------------------------------------------*/
-    /*    Team
-    /*------------------------------------------*/
-    .team-img .img-icons span i{
-        text-align: center;
-        font-size: 35px;
-        width: 35px;
-        height: 35px;
-        padding: 20% 5%;
-    }
-    
-    /*------------------------------------------*/
-    /*    Mobile-Download
-    /*------------------------------------------*/
-    .mobile-download .right-features {
-        margin-top: 70px;
-    }
-
-    /*------------------------------------------*/
-    /*   Footer
-    /*------------------------------------------*/
-    .footer {
-        text-align: center;
-    }
-
-    .footer .footer-nav li:first-of-type{
-        margin-left:0;
-    }
-
-    .footer-copy{
-        margin-top:20px;
-    }
-
-    .footer-nav{
-        margin-top: 75px;
-    }
-
-    .footer h5 {
-        margin-top: 60px;
-    }
-
-    /*------------------------------------------*/
-    /*   Header App
-    /*------------------------------------------*/
-    .hero-app .hero-section{
-        padding-top: 0;
-    }
-
-    .hero-app .hero-section .btn-box{
-        display: none;
-    }
-
-    
+        
 
 }
 
@@ -413,169 +189,15 @@
     }
 
     /*------------------------------------------*/
-    /*   About - Intro Features
-    /*------------------------------------------*/
-    .intro-features{
-        text-align: left;
-    }
-
-    .intro-features .intro-content{
-        margin-bottom: 50px;
-    }
-
-    .intro-features .intro-content:last-child{
-        margin-bottom: 0;
-    }
-
-    .intro-content .icon-lg{
-        display:inline-block;
-        margin-bottom: 20px;
-        width: 90px;
-    }
-
-    .intro-content h4{
-        display: inline-block;
-        position: relative;
-        bottom: 20px;
-    }
-
-    /*------------------------------------------*/
-    /*  Features Tab
-    /*------------------------------------------*/
-    .tab-features .tab-content {
-        height: auto;
-        padding-bottom: 100px;
-    }
-
-    /*------------------------------------------*/
-    /*   Newsletter
-    /*------------------------------------------*/
-    .newsletter .input-group{
-        width: 80%;
-        margin: 0;
-    }
-
-    .newsletter .table {
-        text-align: left;
-    }
-    
-    /*------------------------------------------*/
-    /*   Signup-Divider
-    /*------------------------------------------*/
-    .signup-handwritten {
-        display:none;
-    }
-
-    /*------------------------------------------*/
-    /*    Pricing
-    /*------------------------------------------*/
-    .pricing-tab {
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-
-    .pricing .large {
-        margin-bottom: 0;
-    }
-
-    /*------------------------------------------*/
-    /*    Team
-    /*------------------------------------------*/
-    .team .team-box{
-        margin-bottom: 50px;
-    }
-
-    .team h4{
-        margin-bottom: 10px;
-    }
-
-    .team .team-img{
-        width: 30%;
-        float: left;
-        clear:both;
-        margin-top:0;
-        margin-right: 10px;
-    }
-
-    .team .team-bio {
-        border-bottom: 1px solid transparent;
-    }
-
-    .team .team-url{
-        display: none;
-    }
-
-    /*------------------------------------------*/
-    /*    Mobile-Download
-    /*------------------------------------------*/
-    .mobile-download h3 {
-        margin-top: 0;
-    }
-
-    .mobile-download .shot-container{
-        display:none;
-    }
-
-    .mobile-download .right-features {
-        display:none;
-    }
-
-    /*------------------------------------------*/
-    /*    Footer
-    /*------------------------------------------*/
-    .footer{
-        text-align: left;
-    }
-
-    .footer-nav{
-        display:none
-    }
-
-    .footer-copy {
-        margin-top: 35px;
-        text-align: left;
-        padding-left: 15px;
-    }
-
-    .tweet ul {
-        padding-left: 15px;
-    }
-
-    /*------------------------------------------*/
-    /*    Fast-reg Fixes
-    /*------------------------------------------*/
-    .fast-reg .form-group{
-        width: 35%;
-        margin-bottom: 15px;
-    }
-
-    /*------------------------------------------*/
-    /*   Countdown
+    /*   Countdown Header
     /*------------------------------------------*/
     .countdown {
         width: 100%;
     }
 
-    .countdown-box .large{
-        display:none;
-    }
     
-    .countdown-box .earlyaccess-box {
-        margin-top:5px;
-    }
 
-    /*------------------------------------------*/
-    /*   Header App
-    /*------------------------------------------*/
-    .hero-app .hero-section .btn-box{
-        display: block;
-    }
-
-    .hero-app .hero-section .btn{
-        margin-top: 5px;
-    }
-    
+            
 
 }
 
@@ -603,75 +225,7 @@
         font-size: 28px;
         line-height: 32px;
     }
-
-    /*------------------------------------------*/
-    /*    Sign-Up Divider
-    /*------------------------------------------*/
-    .signup-divider{
-        text-align: left;
-    }
-
-    .signup-divider .form-group{
-        width: 80%;
-        margin-bottom: 15px;
-        margin-right: 0;
-        padding-left: 15px;
-    }
-
-    .signup-divider .btn{
-        width: 78%;
-        margin-left: 15px;
-    }
-
-    /*------------------------------------------*/
-    /*   Showcase Video Button
-    /*------------------------------------------*/
-    .showcase .video-player{
-        left: 51%;
-        top: 36%;
-    }
-
-    /*------------------------------------------*/
-    /*   Testimonial-Press Section
-    /*------------------------------------------*/
-    .testimonial-press .large{
-        margin-bottom: 30px;
-    }
-
-    /*------------------------------------------*/
-    /*    Team
-    /*------------------------------------------*/
-    .team .team-box{
-        margin-bottom: 30px;
-    }
-
-    .team .team-box:last-child{
-        margin-bottom: 0;
-    }
-
-    .team h4{
-        margin-bottom: 5px;
-    }
-
-    /*------------------------------------------*/
-    /*    Fast-reg Fixes
-    /*------------------------------------------*/
-    .header.fast-reg-img .overlay{
-        height: 650px;
-    }
-
-    .fast-reg .form-group{
-        width: 80%;
-        margin-bottom: 10px;
-    }
-
-    .fast-reg .btn{
-        width: 80%;
-    }
-
-    .fast-reg-box{
-        margin-top: 20px;
-    }
+    
     
        	
 }
@@ -704,7 +258,7 @@
     }
 
     /*------------------------------------------*/
-    /*    Login/Signup Modal
+    /*    Early Access Modal
     /*------------------------------------------*/
     .login .modal-dialog{
         width: 80%;
@@ -712,106 +266,21 @@
     }
 
     /*------------------------------------------*/
-    /*   Showcase 
+    /*    Early Access Fixes
     /*------------------------------------------*/
-    .showcase .video-player{
-        left: 50%;
-        top: 32%;
-        font-size: 45px;
-    }
-
-    .showcase .img-box{
-        margin-top: 30px;
-    }
-
-    /*------------------------------------------*/
-    /*    Sign-Up Divider
-    /*------------------------------------------*/
-    .signup-divider .btn{
-        width: 77%;
-    }
-
-    /*------------------------------------------*/
-    /*   Testimonial-Press Section
-    /*------------------------------------------*/
-    .testimonial-press{
-        height: 650px;
-    }
-
-    /*------------------------------------------*/
-    /*   Newsletter
-    /*------------------------------------------*/
-    .newsletter .input-group{
-        width: 100%;
-    }
-
-    /*------------------------------------------*/
-    /*   Charts
-    /*------------------------------------------*/
-    .line-canvas{
-        width:100%;
-    }
-
-    /*------------------------------------------*/
-    /*    Pricing
-    /*------------------------------------------*/
-    .pricing-tab {
-        max-width: 300px;
-    }
-
-    /*------------------------------------------*/
-    /*    Team
-    /*------------------------------------------*/
-    .team .team-img{
-        width:100%;
-        margin-bottom: 10px;
-    }
-
-    .team h4{
-        margin-bottom: 5px;
-    }
-
-    .team-img .img-icons span i{
-        font-size: 60px;
-        width: 60px;
-        height: 60px;
-        padding: 5%;
-    }
-
-    /*------------------------------------------*/
-    /*    Mobile-Download
-    /*------------------------------------------*/
-    .mobile-download .shot-container{
-        display:block;
-        margin-top: 50px;
-    }
-
-    .mobile-download .right-features {
-        display:block;
-    }
-
-    /*------------------------------------------*/
-    /*   Footer
-    /*------------------------------------------*/
-    .footer-cta .btn{
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .footer-nav{
-        margin-top: 50px;
-    }
-
-    /*------------------------------------------*/
-    /*    Fast-reg, Early Access Fixes
-    /*------------------------------------------*/
-    .fast-reg .large{
-        display: none;
-    }
-
     .earlyaccess .btn{
         font-size: 10px;
+        padding: 16px 5px 15px;
+    }
+    
+    /*------------------------------------------*/
+    /*   Early Access Feature Fixes
+    /*------------------------------------------*/
+    .icon-sm.feature-box-left{
+        text-align:left;
+        overflow: hidden;
     }
 
+    
 
 }

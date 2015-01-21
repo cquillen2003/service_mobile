@@ -17,53 +17,6 @@ $(window).load(function() {
 
 
 /* =================================
-   LOGIN-SIGNUP MODAL                     
-=================================== */
-
-function showRegisterForm(){
-    "use strict";
-    $('.loginBox').fadeOut('fast',function(){
-        $('.registerBox').fadeIn('fast');
-        $('.login-footer').fadeOut('fast',function(){
-            $('.register-footer').fadeIn('fast');
-        });
-        $('.modal-title').html('Create an Account');
-        $('.modal-subtitle').html('Begin a 30-day free trial of SmartMVP');
-    });
-    $('.error').removeClass('alert alert-danger').html('');
-}
-
-
-function showLoginForm(){
-    "use strict";
-    $('#loginModal .registerBox').fadeOut('fast',function(){
-        $('.loginBox').fadeIn('fast');
-        $('.register-footer').fadeOut('fast',function(){
-            $('.login-footer').fadeIn('fast');
-        });
-        
-        $('.modal-title').html('Sign in to <span>SmartMvp</span>');
-        $('.modal-subtitle').html('Enter your email and password');
-    });
-    $('.error').removeClass('alert alert-danger').html('');
-}
-
-
-function openLoginModal(){
-    "use strict";
-    showLoginForm();
-    $('#loginModal').modal('show');
-}
-
-
-function openRegisterModal(){
-    "use strict";
-    showRegisterForm();
-    $('#loginModal').modal('show');
-}
-
-
-/* =================================
    EARLY ACCESS MODAL                     
 =================================== */
 function showEarlyAccessForm(){
@@ -93,19 +46,6 @@ $(window).scroll(function(){
         $(".navbar").removeClass("is-scrolling");
     }
 });
-
-
-/* =================================
-   TYPING EFFECT
-=================================== */
-(function($) {
-
-    "use strict";
-
-    $('[data-typer-targets]').typer();
-    $.typer.options.clearOnHighlight=false;
-
-})(jQuery);
 
 
 /* =================================
@@ -147,7 +87,6 @@ $(window).scroll(function(){
 
 $(document).ready(function() {
 
-
 "use strict";
 
 
@@ -163,53 +102,18 @@ if (Modernizr.touch && ($('.header').attr('data-stellar-background-ratio') !== u
     });
 }
 
+
 /* =================================
     WOW ANIMATIONS                   
 =================================== */
 new WOW().init();
 
-/* ==========================================
-    EASY TABS
-============================================= */
-$('.tabs.testimonials').easytabs({
-    animationSpeed: 300,
-    updateHash: false,
-    cycle: 10000
-});
-
-$('.tabs.features').easytabs({
-    animationSpeed: 300,
-    updateHash: false
-});
-
-
-/* ==========================================
-   OWL CAROUSEL 
-============================================= */
-/* App Screenshot Carousel in Mobile-Download Section */
-$("#owl-carousel-shots-phone").owlCarousel({
-    singleItem:true,navigation: true,
-    navigationText: [
-        "<i class='icon arrow_carrot-left'></i>",
-        "<i class='icon arrow_carrot-right'></i>"
-                    ],
-    addClassActive : true,
-    itemsDesktop : [1200, 1],
-    itemsDesktopSmall : [960, 1],
-    itemsTablet : [769, 1],
-    itemsMobile : [700, 1],
-    responsiveBaseWidth : ".shot-container",
-    items : 1,
-    slideSpeed : 1000,
-    mouseDrag : true,
-    responsiveRefreshRate : 200,
-    autoPlay: 5000
-});
 
 /* ==========================================
     VENOBOX - LIGHTBOX FOR GALLERY AND VIDEOS
 ============================================= */
 $('.venobox').venobox();
+
 
 /* ===================================================================
     TWEETIE -  TWITTER FEED PLUGIN THAT WORKS WITH NEW Twitter 1.1 API
@@ -242,30 +146,57 @@ if (onMobile === true) {
 }
 
 
-/* ==========================================
-   MAILCHIMP NEWSLETTER SUBSCRIPTION
+/* =============================================
+   MAILCHIMP EARLY-ACCESS - HEADER SUBSCRIPTION
 ============================================= */
-$(".mailchimp-subscribe").ajaxChimp({
-    callback: mailchimpCallback,
-    url: "http://themedept.us9.list-manage.com/subscribe/post?u=63465a86fdd5f3b9fa31f9278&amp;id=52df53337f" // Replace your mailchimp post url inside double quote "".  
+$("#subscribe").ajaxChimp({
+    callback: mailchimpCallbackbetaform,
+    url: "http://themedept.us9.list-manage.com/subscribe/post?u=63465a86fdd5f3b9fa31f9278&amp;id=52df53337f" // Replace your mailchimp post url inside double quote "". 
 });
 
-function mailchimpCallback(resp) {
+function mailchimpCallbackbetaform(resp) {
 if(resp.result === 'success') {
-    $('.mc-success')
+    $('.mcbeta-success')
     .html('<i class="icon icon_check_alt2"></i>' + resp.msg)
     .fadeIn(1000);
 
-    $('.mc-failed').fadeOut(500);
+    $('.mcbeta-failed').fadeOut(500);
         
 } else if(resp.result === 'error') {
-    $('.mc-failed')
+    $('.mcbeta-failed')
     .html('<i class="icon icon_close_alt2"></i>' + resp.msg)
     .fadeIn(1000);
             
-    $('.mc-success').fadeOut(500);
+    $('.mcbeta-success').fadeOut(500);
 }
 }
+
+
+/* ==========================================
+   MAILCHIMP EARLY-ACCESS - MODAL SUBSCRIPTION
+============================================= */
+$("#earlyaccess-modal").ajaxChimp({
+    callback: mailchimpCallbackmodal,
+    url: "http://themedept.us9.list-manage.com/subscribe/post?u=63465a86fdd5f3b9fa31f9278&amp;id=52df53337f" // Replace your mailchimp post url inside double quote "".  
+});
+
+function mailchimpCallbackmodal(resp) {
+if(resp.result === 'success') {
+    $('.lm-success')
+    .html('<i class="icon icon_check_alt2"></i>' + resp.msg)
+    .fadeIn(1000);
+
+    $('.lm-failed').fadeOut(500);
+        
+} else if(resp.result === 'error') {
+    $('.lm-failed')
+    .html('<i class="icon icon_close_alt2"></i>' + resp.msg)
+    .fadeIn(1000);
+            
+    $('.lm-success').fadeOut(500);
+}
+}
+
 
 /* ==========================================
    FUNCTION FOR EMAIL ADDRESS VALIDATION
@@ -278,9 +209,41 @@ function isValidEmail(emailAddress) {
 
 }
 
+
 /* ==========================================
-   LOCAL NEWSLETTER/EARLY ACCESS SUBSCRIPTION
+   CONTACT FORM
 ============================================= */
+$("#contact").submit(function(e) {
+    e.preventDefault();
+    var data = {
+        name: $("#name").val(),
+        email: $("#email").val(),
+        message: $("#message").val(),
+    };
+
+    if ( isValidEmail(data['email']) && (data['message'].length > 1) && (data['name'].length > 1) ) {
+        $.ajax({
+            type: "POST",
+            url: "assets/php/sendmail.php",
+            data: data,
+            success: function() {
+                $('.email-success').delay(500).fadeIn(1000);
+                $('.email-failed').fadeOut(500);
+            }
+        });
+    } else {
+        $('.email-failed').delay(500).fadeIn(1000);
+        $('.email-success').fadeOut(500);
+    }
+
+    return false;
+});
+
+
+/* ==========================================
+   LOCAL NEWSLETTER 
+============================================= */
+/*
 $("#subscribe").submit(function(e) {
     e.preventDefault();
     var data = {
@@ -303,301 +266,8 @@ $("#subscribe").submit(function(e) {
     }
 
     return false;
-});
-
-/* =====================================================================
-   LOGIN-MODAL VALIDATION. FIELD VALUES WILL BE SENT TO LOGIN-MODAL.PHP
-======================================================================== */
-$("#login-modal").submit(function(e) {
-    e.preventDefault();
-    var data = {
-        password: $("#lm-password").val(),
-        email: $("#lm-email").val()
-    };
-
-    if ( isValidEmail(data['email']) && (data['password'].length > 1) ) {
-        $.ajax({
-            type: "POST",
-            url: "assets/php/subscribe.php",
-            data: data,
-            success: function() {
-                $('.lm-success').fadeIn(1000);
-                $('.lm-failed').fadeOut(500);
-            }
-        });
-    } else {
-        $('.lm-failed').fadeIn(1000);
-        $('.lm-success').fadeOut(500);
-    }
-
-    return false;
-});
-
-
-/* ========================================================================================
-   SIGNUP-MODAL VALIDATION. WITH CONFIRM PSW. FIELD VALUES WILL BE SENT TO SIGNUP-MODAL.PHP
-=========================================================================================== */
-$("#signup-modal").submit(function(e) {
-    e.preventDefault();
-    var data = {
-        password: $("#sm-password").val(),
-        email: $("#sm-email").val(),
-        pswconfirm: $("#sm-confirm").val()
-    };
-
-    if ( isValidEmail(data['email']) && (data['password'].length > 1) && (data['password'].match(data['pswconfirm'])) ) {
-        $.ajax({
-            type: "POST",
-            url: "assets/php/subscribe.php",
-            data: data,
-            success: function() {
-                $('.sm-success').fadeIn(1000);
-                $('.sm-failed').fadeOut(500);
-            }
-        });
-    } else {
-        $('.sm-failed').fadeIn(1000);
-        $('.sm-success').fadeOut(500);
-    }
-
-    return false;
-});
-
-/* ==========================================
-   EARLY ACCESS MODAL VALIDATION
-============================================= */
-$("#earlyaccess-modal").submit(function(e) {
-    e.preventDefault();
-    var data = {
-        email: $("#lm-email").val()
-    };
-
-    if ( isValidEmail(data['email']) ) {
-        $.ajax({
-            type: "POST",
-            url: "assets/php/subscribe.php",
-            data: data,
-            success: function() {
-                $('.lm-success').fadeIn(1000);
-                $('.lm-failed').fadeOut(500);
-            }
-        });
-    } else {
-        $('.lm-failed').fadeIn(1000);
-        $('.lm-success').fadeOut(500);
-    }
-
-    return false;
-});
-
-/* ========================================================================================
-   SIGNUP-DIVIDER VALIDATION. WITHOUT CONFIRM PSW. FIELD VALUES WILL BE SENT TO SIGNUP.PHP
-=========================================================================================== */
-$("#signup-divider").submit(function(e) {
-    e.preventDefault();
-    var data = {
-        email: $("#signup-email").val(),
-        password: $("#signup-password").val()
-    };
-
-    if ( isValidEmail(data['email']) && (data['password'].length > 1)) {
-        $.ajax({
-            type: "POST",
-            url: "assets/php/subscribe.php",
-            data: data,
-            success: function() {
-                $('.signup-success').fadeIn(1000);
-                $('.signup-failed').fadeOut(0);
-            }
-        });
-    } else {
-        $('.signup-failed').fadeIn(1000);
-        $('.signup-success').fadeOut(500);
-    }
-
-    return false;
-});
-
-/* ========================================================================================
-   FAST-REGISTRATION VALIDATION. WITHOUT CONFIRM PSW. FIELD VALUES WILL BE SENT TO SIGNUP.PHP
-=========================================================================================== */
-$("#fast-reg").submit(function(e) {
-    e.preventDefault();
-    var data = {
-        name: $("#fast-name").val(),
-        email: $("#fast-email").val(),
-        password: $("#fast-password").val()
-    };
-
-    if ( isValidEmail(data['email']) && (data['password'].length > 1) && (data['name'].length > 1) ) {
-        $.ajax({
-            type: "POST",
-            url: "assets/php/subscribe.php",
-            data: data,
-            success: function() {
-                $('.fast-success').fadeIn(1000);
-                $('.fast-failed').fadeOut(500);
-            }
-        });
-    } else {
-        $('.fast-failed').fadeIn(1000);
-        $('.fast-success').fadeOut(500);
-    }
-
-    return false;
-});
-
-/* =======================================================================
-   DOUGHNUT CHART
-========================================================================== */
-var isdonut = 0;
-        
-$('.start-charts').waypoint(function(direction){
-    if (isdonut == 1){}
-        else {
-            var doughnutData = [
-                {
-                    value: 50,
-                    color:"#C0392B",
-                    highlight: "#EA402F",
-                    label: "Beautiful Design"
-                },
-                {
-                    value: 25,
-                    color: "#323A45",
-                    highlight: "#4C5B70",
-                    label: "Responsive Layout"
-                },
-                {
-                    value: 15,
-                    color: "#949FB1",
-                    highlight: "#A8B3C5",
-                    label: "Persuasive Call to Action"
-                },
-                {
-                    value: 5,
-                    color: "#27AE60",
-                    highlight: "#29C36A",
-                    label: "Social Proof"
-                }
-
-            ];
-
-            var doughnut2Data = [
-                {
-                    value: 827,
-                    color:"#C0392B",
-                    highlight: "#EA402F",
-                    label: "Cups of Coffee"
-                },
-                {
-                    value: 1775,
-                    color: "#323A45",
-                    highlight: "#4C5B70",
-                    label: "Code Hours"
-                },
-                {
-                    value: 580,
-                    color: "#2980B9",
-                    highlight: "#2F97DC",
-                    label: "Design Hours"
-                },
-                {
-                    value: 540,
-                    color: "#949FB1",
-                    highlight: "#A8B3C5",
-                    label: "Songs Listened"
-                }
-            ];
-
-            
-            
-            var ctx = document.getElementById("chart-area").getContext("2d");
-            window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : false});
-
-            var ctx = document.getElementById("chart2-area").getContext("2d");
-            window.myDoughnut = new Chart(ctx).Doughnut(doughnut2Data, {responsive : false});
-
-            isdonut = 1;
-        }
-});
-
-/* =======================================================================
-   LINE CHART
-========================================================================== */
-var isline = 0;
-        
-$('.start-line').waypoint(function(direction){
-    if (isline == 1){}
-        else {
-
-            var lineChartData = {
-                labels : ["January","February","March","April","May","June","July"],
-                datasets : [
-                    {
-                        label: "My First dataset",
-                        fillColor : "rgba(192,57,43,0.2)",
-                        strokeColor : "rgba(192,57,43,1)",
-                        pointColor : "rgba(192,57,43,1)",
-                        pointStrokeColor : "#fff",
-                        pointHighlightFill : "#fff",
-                        pointHighlightStroke : "rgba(192,57,43,1)",
-                        data : [10,20,20,15,25,37,32]
-                    },
-                    {
-                        label: "My Second dataset",
-                        fillColor : "rgba(50,58,69,0.2)",
-                        strokeColor : "rgba(50,58,69,1)",
-                        pointColor : "rgba(50,58,69,1)",
-                        pointStrokeColor : "#fff",
-                        pointHighlightFill : "#fff",
-                        pointHighlightStroke : "rgba(50,58,69,1)",
-                        data : [20,23,33,57,74,81,96]
-                    }
-                ]
-
-            };
-
-            var ctx = document.getElementById("line-canvas").getContext("2d");
-            window.myLine = new Chart(ctx).Line(lineChartData, {responsive: true});
-
-            isline = 1;
-        }
-});
-
-/* =======================================================================
-   SIGNUP-DIVIDER ANIMATED POLYGON BACKGROUND
-========================================================================== */
-    var container = document.getElementById('canvas-bg');
-    var renderer = new FSS.CanvasRenderer();
-    var scene = new FSS.Scene();
-    var light = new FSS.Light('323A45', '323A45');
-    var geometry = new FSS.Plane(2000, 1000, 15, 8);
-    var material = new FSS.Material('FFFFFF', 'FFFFFF');
-    var mesh = new FSS.Mesh(geometry, material);
-    var now, start = Date.now();
-
-    function initialise() {
-      scene.add(mesh);
-      scene.add(light);
-      container.appendChild(renderer.element);
-      window.addEventListener('resize', resize);
-    }
-
-    function resize() {
-      renderer.setSize(container.offsetWidth, container.offsetHeight);
-    }
-
-    function animate() {
-      now = Date.now() - start;
-      light.setPosition(300*Math.sin(now*0.001), 200*Math.cos(now*0.0005), 60);
-      renderer.render(scene);
-      requestAnimationFrame(animate);
-    }
-
-    initialise();
-    resize();
-    animate();
+}); 
+*/
 
 
 /* =======================================================================

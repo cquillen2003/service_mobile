@@ -1,12 +1,12 @@
 /* ==========================================================================
-   COLOR: BLUE - #2980b9, #3498db
+   COLOR: GREEN #27ae60 - #2ecc71
 ========================================================================== */ 
 a, .text-color {
-    color: #2980b9;
+    color: #27ae60;
 }
 
 .color-bg {
-    background-color: #2980b9;
+    background-color: #27ae60;
 }
 
 /*------------------------------------------*/
@@ -14,35 +14,35 @@ a, .text-color {
 /*------------------------------------------*/
 .btn-color-ghost {
     background: transparent;
-    color: #2980b9;
-    border-color: #2980b9;
+    color: #27ae60;
+    border-color: #27ae60;
 }
 
 .btn-color, .btn-color-ghost:hover {
-    background: #2980b9;
+    background: #27ae60;
     color: #fff;
-    border-color: #2980b9;
+    border-color: #27ae60;
 }
 
 .btn-color:hover {
     background: #ffffff;
-    color: #2980b9;
-    border-color: #2980b9;
+    color: #27ae60;
+    border-color: #27ae60;
 }
 
 .btn-white {
-    color: #2980b9;
+    color: #27ae60;
 }
 
 .navbar-nav>li>a.btn-signup {
-    background: #2980b9;
+    background: #27ae60;
     color: #ffffff;
-    border-color: #2980b9;
+    border-color: #27ae60;
 }
 
 .navbar-nav>li>a.btn-signup:hover, .navbar-nav>li>a.btn-signup:focus {
     background: #ffffff;
-    color: #2980b9;
+    color: #27ae60;
     border-color: #ffffff;
 }
 
@@ -50,12 +50,12 @@ a, .text-color {
 /*   Form
 /*------------------------------------------*/
 .form-control {
-    border: 2px solid #3498db;
+    border: 2px solid #2ecc71;
 }
 
 .footer .form-control:focus {
     color: #ddd;
-    background-color: #2980b9;
+    background-color: #27ae60;
     box-shadow: none;
     outline: none;
 }
@@ -64,21 +64,21 @@ a, .text-color {
 /*   Icons
 /*------------------------------------------*/
 .icon-lg:hover, .icon-lg:focus, .icon-sm:hover, .icon-sm:focus {
-    color:#2980b9;
+    color:#27ae60;
 }
 
 /*------------------------------------------*/
 /*   Preloader
 /*------------------------------------------*/
 .preloader{
-    background-color: #2980b9;
+    background-color: #27ae60;
 }
 
 /*------------------------------------------*/
 /*   Navbar Links Menu
 /*------------------------------------------*/
 .is-scrolling .navbar-nav>.active>a, .is-scrolling .navbar-nav>.active>a:hover, .is-scrolling .navbar-nav>.active>a:focus {
-    color: #2980b9;
+    color: #27ae60;
     background-color: transparent;
 }
 
@@ -87,14 +87,36 @@ a, .text-color {
 /*------------------------------------------*/
 .login .modal-header .modal-title span{
     font-weight: 400;
-    color: #2980b9;
+    color: #27ae60;
+}
+
+/*------------------------------------------*/
+/*   Pricing Tab
+/*------------------------------------------*/
+.pricing-tab {
+    border: 3px solid #2ecc71;
+}
+
+.pricing-tab h4 {
+    border-bottom: 3px solid #2ecc71;
+}
+
+.pricing-tab .ribbon .popular{
+    background-color: #27ae60;
+}
+
+/*------------------------------------------*/
+/*   Team
+/*------------------------------------------*/
+.team-img .img-icons span i:hover{
+    color: #27ae60;
 }
 
 /*------------------------------------------*/
 /*   Footer
 /*------------------------------------------*/
 .footer a:hover{
-    color: #2980b9;
+    color: #27ae60;
 }
 
 
