@@ -1193,8 +1193,7 @@ p {
 
 /* Fast-reg , EarlyAccess Fixes */
 .fast-reg .hero-section, .earlyaccess .hero-section{
-    /*text-align: center;*/
-    padding-top: 20%;
+    text-align: center;
 }
 
 .fast-reg .form-control, .earlyaccess .form-control{

@@ -1,3 +1,7 @@
+.fast-reg .hero-section, .earlyaccess .hero-section{
+    text-align: left;
+}
+
 .hero-section p {
 	margin-bottom: 20px;
 }
@@ -9,7 +13,7 @@
 @media (min-width: 992px) {
 
 	.earlyaccess .hero-section {
-		padding-top: 0;
+		padding-top: 5%;
 	}
 
 }
