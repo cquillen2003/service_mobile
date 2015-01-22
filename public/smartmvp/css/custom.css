@@ -1,3 +1,7 @@
 .earlyaccess .hero-section {
 	text-align: left;
 }
+
+.hero-section p {
+	margin-bottom: 20px;
+}
