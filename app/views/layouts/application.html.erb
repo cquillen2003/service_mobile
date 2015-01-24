@@ -133,7 +133,8 @@
                                                     <%= f.text_field(:email, class: "form-control", style: "min-width:195px",
                                                         placeholder: "Enter your Email Address") %>
                                                     <span class="input-group-btn">
-                                                        <%= f.submit "GET EARLY ACCESS", class: "btn btn-color", id: "lead_button"  %>
+                                                        <%= f.submit "GET EARLY ACCESS", class: "btn btn-color", id: "lead_button",
+                                                            data: { disable_with: "SENDING............." }  %>
                                                     </span>
                                                 </div>
                                             
