@@ -27,16 +27,14 @@
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700%7COpen+Sans:300,400,600,700%7CHandlee" rel="stylesheet">
     
-    <!-- PLUGINS STYLESHEET 
-    <link rel="stylesheet" href="/smartmvp/css/plugins/animate.min.css">
-    <link rel="stylesheet" href="/smartmvp/css/plugins/venobox.min.css">
-    -->
+    <!-- PLUGINS STYLESHEET -->
+    <link rel="stylesheet" href="/smartmvp/standard-variations/css/plugins/plugins.min.css">
     
     <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" href="/smartmvp/css/style.css">
+    <link rel="stylesheet" href="/smartmvp/standard-variations/css/style.css">
 
     <!-- RESPONSIVE FIXES -->
-    <link rel="stylesheet" href="/smartmvp/css/responsive.css">
+    <link rel="stylesheet" href="/smartmvp/standard-variations/css/responsive.css">
 
     <!-- COLORE STYLESHEET -->
     <!-- Change here the Main Color of the Site: Choose your favorite predefined color from assets/css/colors.css -->
@@ -59,7 +57,7 @@
         ============================== -->
         <div class="preloader">
             <div class="loader-container">
-                <div class="text-logo">ServiceWise</div>
+                <div class="text-logo">ServiceBase</div>
                 <div class="signal"></div>
             </div>
         </div> 
@@ -85,8 +83,8 @@
 
 
                                     <!-- Text-Logo -->
-                                    <a href="#top" class="navbar-brand scrollto" title="ServiceWise">
-                                        <span class="text-logo">ServiceWise</span>
+                                    <a href="#top" class="navbar-brand scrollto" title="ServiceBase">
+                                        <span class="text-logo">ServiceBase</span>
                                     </a> 
 
                                     <!-- Image-Logo: Remove this comments and the section above Text-Logo if you want to add an Image-Logo (recommended sizes -> max-height:50, max-width:200) 
@@ -107,7 +105,7 @@
                 <!-- =========================================
                      Hero-Section
                 ========================================== -->
-                <div class="container vmiddle earlyaccess">
+                <div class="container vmiddle hero-app">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="hero-section">
@@ -116,34 +114,10 @@
                                 <h1 class="text-white">Paperless At Last</h1>
                                 <p class="text-white">Easily complete service tickets, proposals, inspection reports, maintenance agreements, and record equipment information in the field with mobile forms built for HVAC.  And integrate them with existing software.</p>
 
-                                <p class="text-white">Coming Spring 2015.</p>
-                                
-                                <div class="col-sm-12" style="padding-left:0">    
-                                    
-                                    <!-- Early Access Subscribe -->
-                                    <%= form_for(@lead, remote: true) do |f| %>
-                                        <div class="row earlyaccess-box">
-                                            <div class="col-sm-12">
-                                                
-                                                <!-- Notifications -->
-                                                <p class="subscription-success"><i class="icon icon_check_alt2"></i> Thank you!  We will contact you shortly.</p>
-                                                <p class="subscription-failed"><i class="icon icon_close_alt2"></i> Something went wrong!  Please try again later.</p>
-                                                
-                                                <div class="input-group">
-                                                    <%= f.text_field(:email, class: "form-control", style: "min-width:195px",
-                                                        placeholder: "Enter your Email Address") %>
-                                                    <span class="input-group-btn">
-                                                        <%= f.submit "GET EARLY ACCESS", class: "btn btn-color", id: "lead_button",
-                                                            data: { disable_with: "SENDING............." }  %>
-                                                    </span>
-                                                </div>
-                                            
-                                            </div>
-                                        </div>
-                                    <% end %>
-
-                                </div><!-- /End Col -->
-                                <span class="text-white email-policy">We'll never spam you or share your email address.</span>
+                                <!-- Learn More & Video Buttons -->
+                                <div class="btn-box">
+                                    <a href="#about" class="btn btn-color scrollto">Learn More</a>
+                                </div>
 
                             </div><!-- /End Intro-Section -->
                         </div><!-- /End Col -->
@@ -166,77 +140,143 @@
         ============================== -->
 
 
+
         <!-- =================================
-             EARLY FEATURES SECTION
+             SECTION ABOUT - INTRO FEATURES
         ====================================== -->
-        <section class="early-features" id="features">
+        <section class="intro-features" id="about">
             <div class="container">
                 <!-- Padding -->
                 <div class="wrapper-lg">
                     <div class="row">
                         <!-- Section Header Title -->
                         <div class="col-xs-12">
-                            <h2>Designed <strong>with</strong> HVAC technicians <strong>for</strong> HVAC technicians</h2>
-                            <p class="large">Complete forms, capture signatures, and record equipment information from nearly any device, with or without internet access.</p>
+                            <h2>Software designed with HVAC contractors for HVAC contractors</h2>
+                            <p class="large">Providing great software and support requires focus, so we specialize in the HVAC service industry.  Your business is our business.</p>
                         </div>
                     </div>
-                    <!-- Features with Icons -->
+                    <!-- Three Main Features with Icons -->
                     <div class="row">
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-target icon-sm"></i> 
+                        <div class="col-sm-4 intro-content">
+                            <div class="icon-lg">
+                                <i class="icon icon-mobile"></i>
                             </div>
-                            <h4>HVAC Focused</h4>
-                            <p>Service tickets, proposals, inspection reports, maintenance agreements, and more.  No distractions.  Your business is our business.</p>
+                            <h4>Easy to Use</h4>
+                            <p>Optio dolores expedita unde vel laudantium enim nisi eos distinctio, rem. Repellat repudiandae quos laborum magni.</p>
                         </div>
-
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-profile-male icon-sm"></i> 
-                            </div>
-                            <h4>Usability Built-In</h4>
-                            <p>Happy technicians are crucial.  User experience design, extensive field testing, and continous improvement is built-in to everything we do.</p>
-                        </div>
-
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-documents icon-sm"></i> 
-                            </div>
-                            <h4>Simply Flexible </h4>
-                            <p>Submit documents via email, PDF, or to existing software automatically.  Change a little or change a lot.  It's your call.</p>
-                        </div>
-
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-adjustments icon-sm"></i> 
-                            </div>
-                            <h4>Easy to Customize</h4>
-                            <p>More than custom fields.  We tailor our software to work for your business.</p>
-                        </div>
-
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-mobile icon-sm"></i> 
+                        <div class="col-sm-4 intro-content">
+                            <div class="icon-lg">
+                                <i class="icon icon-browser"></i>
                             </div>
                             <h4>Nearly Any Device</h4>
-                            <p>A single product that works seamlessly on iPhone, iPad, Android, Windows Phone, BlackBerry, and more.  Modern HTML5 technology makes it possible.</p>
+                            <p>Praesentium reprehenderit quae, sequi deserunt laboriosam velit necessitatibus nulla ea optio, quis nam pariatur.</p>  
                         </div>
-
-                        <div class="col-md-4 feature-box">
-                            <div class="icon-box">
-                               <i class="icon icon-rss icon-sm"></i> 
+                        <div class="col-sm-4 intro-content">
+                            <div class="icon-lg">
+                                <i class="icon icon-documents"></i>
                             </div>
-                            <h4>Full Offline Capability</h4>
-                            <p>No internet connection required.  Automatically sync when a connection is available.</p>
+                            <h4>Great Support</h4>
+                            <p>Aperiam recusandae ipsa culpa, cupiditate magnam dolor molestiae, omnis, architecto possimus aperiam corrupti corporis.</p>
                         </div>
-                        
                     </div><!-- /End Row -->
                 </div><!-- /End Wrapper -->
             </div><!-- /End Container -->
         </section>
         <!-- =============================
-             /END EARLY FEATURES SECTION
+             /END INTRO FEATURES
         ============================== -->
+
+
+        <!-- ==================================================
+             SECTION 2 COLS - IMAGE RIGHT AND TEXT WITH CALL TO ACTION
+        ======================================================= -->
+        <section class="img-with-action light-bg">
+            <div class="container wrapper-lg">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <!-- Text Col -->
+                        <h3>Validate your Business Idea and Reach Product Market Fit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere veritatis inventore eum, cupiditate esse debitis consectetur nisi harum. Tempore, assumenda ducimus vero totam labore. Ipsam, eos odit eaque, voluptatum minima, odio eveniet soluta saepe, culpa quo enim omnis iusto. Possimus, at numquam beatae non atque?</p>
+                        <!-- Call To Action Buttons -->
+                        <div class="btn-box">
+                            <a href="#features" class="btn btn-grey scrollto">Learn More</a>
+                            <a href="#canvas-bg" class="btn btn-color scrollto"><i class="icon arrow_carrot-2dwnn_alt"></i>Try it for Free</a>
+                        </div>
+                        <!-- Div Required for Correct Charts Animation -->
+                        <div class="start-charts"></div>
+                    </div>
+                </div><!-- /End Row-->
+            </div><!-- /End Container-->
+            <!-- Image Col -->
+            <div class="hidden-sm hidden-xs col-md-6 img-col-bg img-right"></div>
+        </section>
+        <!-- =============================
+             /END SECTION 
+        ============================== -->
+
+
+        <!-- =============================
+             PRICING SECTION
+        ============================== -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="wrapper-lg">
+                    <div class="row">
+
+                    </div>
+                </div><!-- /End Wrapper -->
+            </div><!-- /End Container -->
+        </section>
+        <!-- =============================
+             /END PRICING SECTION 
+        ============================== -->
+
+
+
+        <!-- ==================================================
+            SIGNUP DIVIDER
+        ======================================================= -->
+        <section id="canvas-bg" class="dark-bg signup-divider">
+            <div class="container">
+                <div class="wrapper-lg">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-white">Signup today for early access!</h2>
+                            <p class="large text-white">ServiceBase is an Austin, Texas based startup on a mission to ease the pain of running an HVAC service business.  We're working with a handful of visionary, ambitious HVAC businesses to bring the product to market in 2015.  Signup below to get early access and learn about becoming a beta customer.</p>
+                            
+                            <!-- Handwritten text with arrow -->
+                            <!--
+                            <p class="signup-handwritten text-white">Why wait? Start now! <br>No credit card needed</p>
+                            -->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Signup Form -->
+                        <form id="signup-divider" role="form">
+                            <!-- Notification -->
+                            <p class="signup-success"><i class="icon icon_check_alt2"></i> <strong>Congratulation! Welcome to 30 day Free Trial. Check your email address.</strong></p>
+                            <p class="signup-failed"><i class="icon icon_close_alt2"></i><strong> Something went wrong! Insert correct value.</strong></p>  
+
+                            <!-- Input fields -->
+                            <div class="form-group">
+                                <input type="email" name="signup-email" id="signup-email" class="form-control input-lg" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" size="25" name="signup-password" id="signup-password" class="form-control input-lg" placeholder="Enter your email address" required>
+                            </div>
+                            <!-- Signup Button -->
+                            <button class="btn btn-color">Get Early Access</button>
+                        </form>
+                    </div><!-- /End Row -->
+                </div><!-- /End Wrapper -->
+            </div><!-- /End Container -->
+        </section>
+        <!-- =============================
+             /END SIGNUP SECTION 
+        ============================== -->
+
+
 
         <!-- ==================================================
             FOOTER
@@ -313,12 +353,14 @@
     <!-- Required to include jquery_ujs for remote (ajax) form -->
     <!-- Also includes jquery -->
     <%= javascript_include_tag :application %>
-    <script src="/smartmvp/js/plugins/bootstrap.min.js"></script>
-    <script src="/smartmvp/js/plugins/modernizr.custom.min.js"></script>
-    <script src="/smartmvp/js/plugins/plugins.min.js"></script>
+    <script src="/smartmvp/standard-variations/js/plugins/bootstrap.min.js"></script>
+    <script src="/smartmvp/standard-variations/js/plugins/jquery.easing.1.3.min.js"></script>
+    <script src="/smartmvp/standard-variations/js/plugins/modernizr.custom.min.js"></script>
+    <script src="/smartmvp/standard-variations/js/plugins/plugins.min.js"></script>
+    <script src="/smartmvp/standard-variations/js/plugins/twitter/tweetie.min.js"></script>
 
     <!-- Custom Script -->
-    <script src="/smartmvp/js/custom.js"></script>
+    <script src="/smartmvp/standard-variations/js/custom.js"></script>
 
     <script>
         //Only run Google Analytics in Production
