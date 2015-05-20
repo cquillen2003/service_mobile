@@ -196,11 +196,14 @@ $('.venobox').venobox();
 /* ===================================================================
     TWEETIE -  TWITTER FEED PLUGIN THAT WORKS WITH NEW Twitter 1.1 API
 ==================================================================== */
+
+/*
 $('.tweet').twittie({
     apiPath : 'assets/js/plugins/twitter/api/tweet.php',
     count: 2,
     template: '{{tweet}} - <span class="date">{{date}}</span>'
 });
+*/
 
 
 /* =================================
@@ -467,11 +470,11 @@ $('.start-charts').waypoint(function(direction){
 
             
             
-            var ctx = document.getElementById("chart-area").getContext("2d");
-            window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : false});
+            //var ctx = document.getElementById("chart-area").getContext("2d");
+            //window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : false});
 
-            var ctx = document.getElementById("chart2-area").getContext("2d");
-            window.myDoughnut = new Chart(ctx).Doughnut(doughnut2Data, {responsive : false});
+            //var ctx = document.getElementById("chart2-area").getContext("2d");
+            //window.myDoughnut = new Chart(ctx).Doughnut(doughnut2Data, {responsive : false});
 
             isdonut = 1;
         }

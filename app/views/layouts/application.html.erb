@@ -169,7 +169,7 @@
                                 <i class="icon icon-mobile"></i>
                             </div>
                             <h4>Nearly Any Device</h4>
-                            <p>A single app that works seamlessly on iPhone, iPad, Android, and more with full offline & sync functionality. Modern HTML5 technology makes it possible.</p>  
+                            <p>A single app that works seamlessly on iPhone, iPad, Android, and more with full offline & sync functionality. HTML5 technology makes it possible.</p>  
                         </div>
                         <div class="col-sm-4 intro-content">
                             <div class="icon-lg">
@@ -248,22 +248,39 @@
                     </div>
 
                     <div class="row">
-                        <!-- Signup Form -->
-                        <form id="signup-divider" role="form">
+                        <!-- Early Access Subscribe -->
+                        <%= form_for(@lead, remote: true) do |f| %>
+                        <!-- <form id="signup-divider" role="form"> -->
                             <!-- Notification -->
-                            <p class="signup-success"><i class="icon icon_check_alt2"></i> <strong>Congratulation! Welcome to 30 day Free Trial. Check your email address.</strong></p>
-                            <p class="signup-failed"><i class="icon icon_close_alt2"></i><strong> Something went wrong! Insert correct value.</strong></p>  
+                            <p class="subscription-success">
+                                <i class="icon icon_check_alt2"></i> <strong>Thank you!  We will email you shortly.</strong>
+                            </p>
+                            <p class="subscription-failed">
+                                <i class="icon icon_close_alt2"></i><strong> Something went wrong! Please try again later.</strong>
+                            </p>  
+                            <br />
 
                             <!-- Input fields -->
                             <div class="form-group">
+                                <%= f.text_field(:name, class: "form-control input-lg", placeholder: "Enter your Name") %>
+                                <!--
                                 <input type="email" name="signup-email" id="signup-email" class="form-control input-lg" placeholder="Enter your name" required>
+                                -->
                             </div>
                             <div class="form-group">
+                                <%= f.text_field(:email, class: "form-control input-lg", placeholder: "Enter your Email") %>
+                                <!--
                                 <input type="password" size="25" name="signup-password" id="signup-password" class="form-control input-lg" placeholder="Enter your email address" required>
+                                -->
                             </div>
                             <!-- Signup Button -->
+                            <%= f.submit "GET EARLY ACCESS", class: "btn btn-color", id: "lead_button",
+                                                            data: { disable_with: "SENDING............." }  %>
+                            <!--
                             <button class="btn btn-color">Get Early Access</button>
-                        </form>
+                            -->
+                        <!-- </form> -->
+                        <% end %>
                     </div><!-- /End Row -->
                 </div><!-- /End Wrapper -->
             </div><!-- /End Container -->
@@ -351,7 +368,7 @@
     <script src="/smartmvp/standard-variations/js/plugins/jquery.easing.1.3.min.js"></script>
     <script src="/smartmvp/standard-variations/js/plugins/modernizr.custom.min.js"></script>
     <script src="/smartmvp/standard-variations/js/plugins/plugins.min.js"></script>
-    <script src="/smartmvp/standard-variations/js/plugins/twitter/tweetie.min.js"></script>
+    <!-- <script src="/smartmvp/standard-variations/js/plugins/twitter/tweetie.min.js"></script> -->
 
     <!-- Custom Script -->
     <script src="/smartmvp/standard-variations/js/custom.js"></script>
