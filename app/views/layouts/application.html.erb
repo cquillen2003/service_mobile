@@ -6,9 +6,9 @@
     <!-- TITLE OF SITE -->
     <title>HVAC Software | HVAC Forms | HVAC Estimating Software</title>
 
-    <meta name="description" content="Discover how ServiceWise's online HVAC software can improve customer service and reduce costs for HVAC companies." />
+    <meta name="description" content="Discover how ServiceBases's online HVAC software can improve customer service and reduce costs for HVAC companies." />
     <meta name="keywords" content="HVAC software, contractor software, hvac forms, hvac estimating software" />
-    <meta name="author" content="ServiceWise">
+    <meta name="author" content="ServiceBase">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FAVICON  -->
@@ -17,6 +17,12 @@
     <!-- =========================
        STYLESHEETS 
     ============================== -->
+
+    <!--
+    TODO: Remove /smartmvp/css, etc. directories and change these references
+    because now using markup/assets from SmartMVPs standard variation instead of
+    an early access variant.
+    -->
     
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="/smartmvp/css/plugins/bootstrap.min.css">
@@ -301,7 +307,7 @@
                         <!-- Footer Left Col -->
                         <div class="col-md-6">
                                 <!-- Logo -->
-                                <a href="#top" class="scrollto" title="ServiceWise">
+                                <a href="#top" class="scrollto" title="ServiceBase">
                                     <span class="text-logo">ServiceBase</span>
                                 </a>
                                 <p class="footer-hero">The easiest way to run your HVAC service business.</p>
@@ -320,7 +326,7 @@
                                     <i class="icon icon_mail"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <a href="mailto:info@servicewise.co">info@servicebase.net</a>
+                                    <a href="mailto:info@servicebase.net">info@servicebase.net</a>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -378,8 +384,13 @@
         //http://stackoverflow.com/questions/1251922/is-there-a-way-to-stop-google-analytics-counting-development-work-as-hits
         if (document.location.hostname == 'www.servicebase.net') {
 
-            //TODO: Create new Google Analytics property and then add tracking code here
-            console.log('No tracking code added yet for servicebase.net')
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-58866132-3', 'auto');
+              ga('send', 'pageview');
 
         }
         else {
